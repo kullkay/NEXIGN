@@ -116,7 +116,7 @@ java -jar ptai-cli-plugin.jar check-server --url=https://<Адрес PT AI Enter
 
 римеры команд запуска плагина:
 
-— Проект создан в веб-интерфейсе PT AI Enterprise Edition, синхронный блокирующий запуск
+— Проект создан в веб-интерфейсе PT AI Server, синхронный блокирующий запуск
 с генерацией отчетов:
 ```
 java -jar ptai-cli-plugin.jar ui-ast --input="/home/folder" --
@@ -125,6 +125,7 @@ project="ProjectName"
 **
 --url=https://ptaisrv.domain.org --token=yourtoken
 ```
+
 — Проект создается на основе файла конфигурации, асинхронный запуск:
 ```
 java -jar ptai-cli-plugin.jar json-ast --input="/home/folder" --settingsjson=ai-settings.json
@@ -134,7 +135,7 @@ java -jar ptai-cli-plugin.jar json-ast --input="/home/folder" --settingsjson=ai-
 
 | Формат отчета                   | Параметр                 | Возможные значения                                                                 |
 |----------------------------------|--------------------------|-------------------------------------------------------------------------------------|
-| HTML                             | --report-template         | Список возможных значений представлен в веб-интерфейсе PT AI Ыукмук в разделе Шаблоны отчетов |
+| HTML                             | --report-template         | Список возможных значений представлен в веб-интерфейсе PT AI Server в разделе Шаблоны отчетов |
 |                                  | --report-file             | Имя файла                                                                          |
 |                                  | --report-include-dfd      | True или false                                                                    |
 |                                  | --report-includeglossary  | True или false                                                                    |
@@ -163,7 +164,7 @@ generate-report:
 4.  Укажите параметры для создания отчета, описанные на раздела [«Подготовка команды запуска плагина»](#подготовка-команды-запуска-сканирования).
 
 5.  Укажите параметры для подключения к PT AI Server:
-    • `--url` — адрес PT AI Enterprise Server;
+    • `--url` — адрес PT AI Server;
     • `--token` — токен доступа для плагинов CI/CD.
 
 Пример команды на создание отчетов:
@@ -171,4 +172,3 @@ generate-report:
 java -jar ptai-cli-plugin.jar generate-report --project-id=projectUUID scanresult-id=resultUUID --report-json=ai-report.json --url=https://
 ptaisrv.domain.org --token=yourtoken
 ```
-
