@@ -62,8 +62,11 @@ PT AI Enterprise Agent установлен. Дистрибутив хранит
    `HOSTS="<Имя узла PT AI Enterprise Server:IP-адрес PT AI Enterprise Server>"`
    `AGENT_TOKEN="<Токен доступа>"`
    `AGENT_NAME="<Уникальное имя PT AI Enterprise Agent>"`
+
    [Инструкция по созданию токена](PTAI_Server/README.md#создание-токенов-доступа)
 3. Перезапустите Docker-котейнер PT AI Enterprise Agent:
    `sudo systemctl restart ptai-agent.`
    
 Модуль PT AI Enterprise Agent настроен.
+
+
