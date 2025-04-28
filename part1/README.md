@@ -48,7 +48,9 @@ Docker-образ: portainer/portainer-ce:2.25.0
   Исправление: 
 
   - Обновите библиотеку golang-jwt/jwt до версии 4.5.2 или новее
-  - Подтянуть исправления из патчей bf316c48 и 0951d184
+  - Подтянуть исправления из патчей:
+    [bf316c48](https://github.com/golang-jwt/jwt/commit/bf316c48137a1212f8d0af9288cc9ce8e59f1afb)
+    [0951d184](https://github.com/golang-jwt/jwt/commit/0951d184286dece21f73c85673fd308786ffe9c3)
   - Добавить проверки на корректность расположения точек в JWT токене перед использованием
     функции parse.ParseUnverified
 
@@ -80,7 +82,7 @@ Docker-образ: portainer/portainer-ce:2.25.0
   Исправление:
 
   - Обновите библиотеку gorilla/csrf до версии 1.7.2 или новее;
-  - Подтянуть исправления из патча 9dd6af1f;
+  - Подтянуть исправления из патча [9dd6af1f](https://github.com/gorilla/csrf/commit/9dd6af1f6d30fc79fb0d972394deebdabad6b5eb);
 
 
 * CVE-2024-51744 -- (LOW) Уязвимость присутствует, но не является началом атаки, возникает по
