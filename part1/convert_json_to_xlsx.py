@@ -1,12 +1,16 @@
 from openpyxl import load_workbook
 from openpyxl.utils import get_column_letter
-import pandas as pd
+from pandas import DataFrame
 
-import json
+from json import load
 
 
-with open("portainer.json", "r") as f:
-    data = json.load(f)
+input_file = "portainer.json"
+output_file = "portainer.xlsx"
+
+
+with open(input_file, "r") as f:
+    data = load(f)
 
 
 vulns = []
@@ -19,16 +23,14 @@ for result in data.get("Results", []):
             "Severity": vuln.get("Severity"),
         })
 
-df = pd.DataFrame(vulns)
+df = DataFrame(vulns)
 
-grouped_df = pd.DataFrame(vulns).sort_values(by=["PkgName", "VulnerabilityID"])
+grouped_df = DataFrame(vulns).sort_values(by=["PkgName", "VulnerabilityID"])
 
 
-filename = "portainer.xlsx"
+grouped_df.to_excel(output_file, index=False)
 
-grouped_df.to_excel(filename, index=False)
-
-wb = load_workbook(filename)
+wb = load_workbook(output_file)
 ws = wb.active
 
 for col in ws.columns:
@@ -43,4 +45,4 @@ for col in ws.columns:
     adjusted_width = max_length + 2
     ws.column_dimensions[get_column_letter(column)].width = adjusted_width
 
-wb.save(filename)
+wb.save(output_file)
