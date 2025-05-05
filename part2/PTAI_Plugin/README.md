@@ -173,18 +173,18 @@ java -jar ptai-cli-plugin.jar generate-report --project-id=projectUUID scanresul
 ptaisrv.domain.org --token=yourtoken
 ```
 
-Подготовка файла с параметрами скаинирования
---------------------------------------------
+Подготовка файла с параметрами сканирования
+-------------------------------------------
 
 Основные параметры сканирования:
 
-- `$schema` -- cылка на JSON-схему, описывающаяконфигурационный файл.
+- `$schema` -- Cылка на JSON-схему, описывающая конфигурационный файл.
 
 - `Version` -- Версия конфигурационного файла.
 
 - `ProjectName` -- Название проекта
   
-- `ProgrammingLanguages` -- Стэк анализируемых языков. Возможные значения: Java,
+- `ProgrammingLanguages` -- Стек анализируемых языков. Возможные значения: Java,
   CSharp (Windows, Linux), CSharp (Windows), VB, Php, JavaScript, Python, ObjectiveC, Swift,
   CAndCPlusPlus, Go, Kotlin, Sql, Ruby
 
@@ -204,7 +204,7 @@ ptaisrv.domain.org --token=yourtoken
 - `JavaSettings` -- Параметры настройки анализа Java кода:
   
   * `Parameters` -- Параметры запуска Java Virtual Machine
-  * `UnpackUserPackages` -- Флан для распаковки пользовательских JAR-файлов
+  * `UnpackUserPackages` -- Флаг для распаковки пользовательских JAR-файлов
   * `UserPackagePrefixes` -- Префиксы пользовательских пакетов
   * `Version` -- Версия JDK: 8, 11, 17
   * `CustomParameters` -- Дополнительные параметры запуска модуля анализа
