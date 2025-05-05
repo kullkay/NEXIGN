@@ -1,0 +1,30 @@
+
+{ 
+  "$schema": "https://json.schemastore.org/aiproj-1.3.json",
+  "Version": "1.3",
+  "ProjectName": "Test_Project",
+  "ProgrammingLanguages": ["Java", "CAndCPlusPlus"],
+  "ScanModules": ["StaticCodeAnalysis"],
+  "SkipGitIgnoreFiles": true,
+  "UseSecurityPolicies": true,
+  "UseSastRules": true,
+  "UseCustomPmRules": true,
+  "MailingProjectSettings": {
+    "Enabled": false
+  },
+  "JavaSettings": {
+    "Parameters": null,
+    "UnpackUserPackages": true,
+    "UserPackagePrefixes": null,
+    "Version": "17",
+    "CustomParameters": null,
+    "DownloadDependencies": true, 
+    "UsePublicAnalysisMethod": true 
+  },
+  "CAndCPlusPlusSettings": {
+    "Parameters": null,
+    "UsePublicAnalysisMethod": true,
+    "DownloadDependencies": true, 
+    "CustomParameters": "" 
+  }
+}

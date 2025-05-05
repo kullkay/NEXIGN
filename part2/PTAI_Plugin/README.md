@@ -172,3 +172,48 @@ generate-report:
 java -jar ptai-cli-plugin.jar generate-report --project-id=projectUUID scanresult-id=resultUUID --report-json=ai-report.json --url=https://
 ptaisrv.domain.org --token=yourtoken
 ```
+
+Подготовка файла с параметрами скаинирования
+--------------------------------------------
+
+Основные параметры сканирования:
+
+- `$schema` -- cылка на JSON-схему, описывающаяконфигурационный файл.
+
+- `Version` -- Версия конфигурационного файла.
+
+- `ProjectName` -- Название проекта
+  
+- `ProgrammingLanguages` -- Стэк анализируемых языков. Возможные значения: Java,
+  CSharp (Windows, Linux), CSharp (Windows), VB, Php, JavaScript, Python, ObjectiveC, Swift,
+  CAndCPlusPlus, Go, Kotlin, Sql, Ruby
+
+- `ScanModules` --Модули поиска уязвимостей: Configuration, Components, BlackBox, PatternMatching,
+  StaticCodeAnalysis
+
+- `SkipGitIgnoreFiles` -- Флаг для исключения файлов и папок, указанные в .gitignore.
+  
+- `MailingProjectSettings` -- Параметры для настройки отправки почтовых отчетов.
+  
+- `UseSecurityPolicies` -- Флаг для использование политик безопасности
+  
+- `UseSastRules` -- Флаг для использование правил анализа SAST 
+
+- `UseCustomPmRules` -- Флаг для использование правил анализа по пользовательским шаблонам 
+
+- `JavaSettings` -- Параметры настройки анализа Java кода:
+  
+  * `Parameters` -- Параметры запуска Java Virtual Machine
+  * `UnpackUserPackages` -- Флан для распаковки пользовательских JAR-файлов
+  * `UserPackagePrefixes` -- Префиксы пользовательских пакетов
+  * `Version` -- Версия JDK: 8, 11, 17
+  * `CustomParameters` -- Дополнительные параметры запуска модуля анализа
+  * `DownloadDependencies` -- Флаг для загружать зависимости
+  * `UsePublicAnalysisMethod` -- Флаг для поиска от доступных методов public и protected
+
+- `CAndCPlusPlus` -- Параметры настройки анализа Java кода:
+  
+  * `Parameters` -- Параметры запуска
+  * `CustomParameters` -- Дополнительные параметры запуска модуля анализа
+  * `DownloadDependencies` -- Флаг для загружать зависимости
+  * `UsePublicAnalysisMethod` -- Флаг для поиска от доступных методов public и protected

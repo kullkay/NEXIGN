@@ -1,0 +1,26 @@
+[
+    {
+    "CountToActualize": 1,
+    "Scopes": [
+        {
+        "Rules": [
+            {
+            "Field": "VulnerabilityLevel",
+            "Value": "High",
+            "IsRegex": false 
+            },
+            {
+            "Field": "IsSuspected",
+            "Value": "false",
+            "IsRegex": false
+            },
+            {
+            "Field": "ApprovalState",
+            "Value": "[^2]",
+            "IsRegex": true
+            }
+        ]
+        }
+    ]
+    } 
+]
