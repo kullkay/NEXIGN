@@ -1,0 +1,34 @@
+{
+    "report" : [ {
+      "fileName" : "report.ru.html",
+      "includeDfd" : true,
+      "includeGlossary" : true,
+      "template" : "Отчет PCI DSS 3.2",
+      "filters": {
+        "issueLevel": "ALL",
+        "exploitationCondition": "ALL",
+        "scanMode": "ALL",
+        "suppressStatus": "ALL",
+        "confirmationStatus": "ALL",
+        "sourceType": "ALL"
+      }
+    } ],
+    "sarif" : [ {
+      "fileName" : "report.sarif",
+      "filters": {
+        "issueLevel": "ALL"
+      }
+  } ],
+    "sonarGiif" : [ {
+      "fileName" : "sonarGiif.json",
+      "filters": {
+        "issueLevel": "ALL"
+      }
+  } ],
+    "raw" : [ {
+      "fileName" : "raw.json",
+      "filters": {
+        "issueLevel": "ALL"
+      }
+    } ]
+  }
