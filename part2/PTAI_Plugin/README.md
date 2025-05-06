@@ -168,6 +168,9 @@ generate-report:
                 сканирования в очередь, либо из файла `rest.url`. Если параметр не указан, будет
                 выгружен результат последнего сканирования указанного проекта.
     
+    Примечание! Указывать в данной сборе не нужно, так как для каждого сканирования создается свой
+                проект.
+    
 4.  Укажите параметры для создания отчета, описанные на раздела [«Подготовка команды запуска плагина»](#подготовка-команды-запуска-сканирования).
 
 5.  Укажите параметры для подключения к PT AI Server:
@@ -176,9 +179,14 @@ generate-report:
 
 Пример команды на создание отчетов:
 ```
-java -jar ptai-cli-plugin.jar generate-report --project-id=projectUUID scanresult-id=resultUUID --report-json=ai-report.json --url=https://
-ptaisrv.domain.org --token=yourtoken
+java -jar ptai-cli-plugin.jar generate-report
+--project-name="Test_Project-main-123123"
+--report-json=ai-report.json
+--url=https://ptaisrv.domain.org
+--token=yourtoken
 ```
+
+Если запрос провалился, значит отчет еще не готов, и повторить данное действие через некоторое время.
 
 Подготовка файла settings.json
 ------------------------------
