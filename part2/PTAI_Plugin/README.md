@@ -205,14 +205,15 @@ ptaisrv.domain.org --token=yourtoken
 
   Примечание! Хоть в PT AI есть возможность автоматического распознавания языков, однако лучше для
               проектов на С++ и Java создавать проекты, в которых будут участвовать только один из них.
-              
+
   Примечание! Также рекомендую выбрать дополнительно язык для ведения баз данных. Например SQL.
 
 - `ScanModules` --Модули поиска уязвимостей: Configuration, Components, BlackBox, PatternMatching,
   StaticCodeAnalysis
 
-  Примечание! Согласно [ТЗ](../../Тестовое%20задание%20для%20AppSec.txt) необходим только StaticCodeAnalysis,
-              Configuration, Components, PatternMatching
+  Примечание! Согласно [ТЗ](../../Тестовое%20задание%20для%20AppSec.txt) необходим только StaticCodeAnalysis.
+              Однако, также рекомендую включить Configuration, Components, PatternMatching. Для черного 
+              ящика у PT есть другие, более лучшие продукты.
 
 - `SkipGitIgnoreFiles` -- Флаг для исключения файлов и папок, указанные в .gitignore.
   
