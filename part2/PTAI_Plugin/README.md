@@ -4,6 +4,8 @@
 Установка PT AI Plugin
 ----------------------
 
+Для удобства обновления советую разместить в докере.
+
 Чтобы установить плагин AI.Cli.Plugin:
 1.  Установите последнюю версию Java JDK 8.
 2.  Загрузите плагины с помощью Git: `git clone https://github.com/POSIdev-community/ptai-ee-tools`
