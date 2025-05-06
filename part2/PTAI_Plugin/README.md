@@ -118,7 +118,7 @@ java -jar ptai-cli-plugin.jar check-server --url=https://<Адрес PT AI Enter
     
     Например можно исключить:
     - `**/*test*/**` -- папку с тестами
-    - `**/.*/**` -- скрытые ресурсы, однако необходимо будет в параметре `--includes` указать файл
+    - `**/.*` -- скрытые ресурсы, однако необходимо будет в параметре `--includes` указать файл
                     `**/.gitignore`, так как он может использоваться для сканирования в PT AI.
 
 10. Выполните получившуюся команду.
@@ -133,8 +133,10 @@ java -jar ptai-cli-plugin.jar json-ast
 --input="/home/folder"
 --settings-json=ai-settings.json
 --policy-json=ai-policy.json
+--report-json=ai-report.json
 --async
---excludes=**/test/**,**/assets/**
+--excludes=**/test/**,**/.*
+--include=**/.gitignore
 --output="/home/pt-reports"
 --url=https://ptaisrv.domain.org
 --token=yourtoken
